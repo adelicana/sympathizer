@@ -171,14 +171,14 @@ public class MainActivity<ServiceConnection> extends AppCompatActivity implement
             prevY = event.values[1];
             prevZ = event.values[2];
             }
+        
         //get light sensor data
         if(event.sensor.getType() == Sensor.TYPE_LIGHT){
             sumLight += event.values[0];
             numLightValues++;
             averageLight = sumLight/numLightValues;
             Log.d(TAG, "LIGHT: " + event.values[0] + " | Average light: " + averageLight);
-        }
-
+            }
         }
 
     @Override
@@ -322,46 +322,6 @@ public class MainActivity<ServiceConnection> extends AppCompatActivity implement
                 }
             }
         }
-
-        //check if day or night
-        //day
-            //check if moving
-            //moving
-                //check temp
-                    //if mild = dayMovingMild
-                    //if cool = dayMovingCool
-                    //if warm = dayMovingWarm
-            //not moving
-                //check noise level
-                //if noisy
-                    //check temp
-                        // if mild = daySittingNoiseMild
-                        // if cool = daySittingNoiseCool
-                        // if warm = daySittingNoiseWarm
-                //if quiet
-                    //check temp
-                        // if mild = daySittingQuietMild
-                        // if cool = daySittingQuietCool
-                        // if warm = daySittingQuietWarm
-        //night
-            //check if moving
-            //moving
-                //check temp
-                    //if mild = nightMovingMild
-                    //if cool = nightMovingCool
-                    //if warm = nightMovingWarm
-            //not moving
-            //check noise level
-            //if noisy
-                //check temp
-                    // if mild = nightSittingNoiseMild
-                    // if cool = nightSittingNoiseCool
-                    // if warm = nightSittingNoiseWarm
-            //if quiet
-                //check temp
-                    // if mild = nightSittingQuietMild
-                    // if cool = nightSittingQuietCool
-                    // if warm = nightSittingQuietWarm
     }
 
     public void stopCheckingNoise(){
@@ -483,5 +443,3 @@ public class MainActivity<ServiceConnection> extends AppCompatActivity implement
 
     }
 }
-//Music service by moisoni97: https://github.com/moisoni97/services.backgroud_music
-//Music tracks used from Animal Crossing: New Leaf, for educational purposes
