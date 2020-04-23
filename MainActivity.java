@@ -206,12 +206,12 @@ public class MainActivity<ServiceConnection> extends AppCompatActivity implement
 
         /*============PROCESSING LIGHT============
         Darkness/dimness yielded very low light values, found around 0-10. Placing the phone in dimness for the 10 full seconds yields an averageLight of around 10-14.
-        Placing the phone in a fully lit room for the 10 full seconds yields an averageLight of around 50-100 (may vary depending on color of light). Depending on
+        Placing the phone in a fully lit room for the 10 full seconds yields an averageLight of around 40-100 (may vary depending on color of light). Depending on
         the phone's proximity to the light, it can peak up to 150. However, again, averageLight can vary if light is changing.
-        Thus, the following qualifications are used: 0-40 = dark/dim, 40+ = bright
+        Thus, the following qualifications are used: 0-15 = dark/dim, 15+ = bright
          */
 
-        if(averageLight <= 40) //dark or dim
+        if(averageLight <= 15) //dark or dim
             lightingType = 0;
         else //bright
             lightingType = 1;
