@@ -151,10 +151,10 @@ public class MainActivity<ServiceConnection> extends AppCompatActivity implement
             //account for some noise
             if (changeX < .6)
                 changeX = 0;
-            if (changeX < .6)
-                changeX = 0;
-            if (changeX < .6)
-                changeX = 0;
+            if (changeY < .6)
+                changeY = 0;
+            if (changeZ < .6)
+                changeZ = 0;
 
             if ((changeX > 7) || (changeY > 7) || (changeZ > 8)) {
                 //sharper movements = higher activity score
